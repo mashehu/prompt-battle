@@ -19,10 +19,10 @@ module.exports = {
 			},
 			colors: {
 				'prompt-orange': {
-					DEFAULT: '#F82B38'
+					DEFAULT: '#4c979f'
 				},
 				'prompt-blue': {
-					DEFAULT: '#276BD0'
+					DEFAULT: '#a7c947'
 				}
 			},
 			keyframes: {
