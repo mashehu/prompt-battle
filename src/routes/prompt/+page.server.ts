@@ -13,14 +13,13 @@ export const actions = {
 
 		const DalleResponse = await openai.images.generate({
 			prompt: prompt,
-			n: 1,
+			n: 5,
 			size: '1024x1024',
 			response_format: 'url'
 		});
-
 		return {
 			success: true,
-			url: DalleResponse.data[0]
+			urls: DalleResponse.data
 		};
 	}
 } satisfies Actions;

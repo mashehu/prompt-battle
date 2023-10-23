@@ -7,7 +7,7 @@
 	$colorizedBackground = false;
 </script>
 
-<div class="flex h-full flex-col">
+<div class="flex h-screen flex-col">
 	<form class="mx-6 my-auto">
 		<label class="font-sans" for="user-name">
 			Enter your username:

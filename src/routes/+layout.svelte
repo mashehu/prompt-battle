@@ -51,26 +51,13 @@
 		],
 		site_name: 'Prompt Slam'
 	}}
-	twitter={{
-		handle: '@handle',
-		site: '@site',
-		cardType: 'summary_large_image',
-		title: 'Prompt Slam',
-		description:
-			'Battle each other in an amazing prompt slam using the power of DALL-E.',
-		image: `${$page.url.origin}/twitter-image.png`,
-		imageAlt: 'Prompt Slam'
-	}}
-	facebook={{
-		appId: '1234567890'
-	}}
 />
 
 <Header />
 
 <PageTransition pathname={data.pathname}>
 	<main
-		class="h-screen"
+		class="h-100"
 		class:bg-prompt-orange={$theme === 'orange' &&
 			$colorizedBackground === true}
 		class:bg-prompt-blue={$theme === 'blue' && $colorizedBackground === true}
