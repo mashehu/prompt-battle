@@ -46,7 +46,9 @@
 	let circleColor: string;
 
 	onMount(() => {
-		circleColor = getComputedStyle(document.querySelector('main')).backgroundColor;
+		circleColor = getComputedStyle(
+			document.querySelector('main')
+		).backgroundColor;
 		const interval = setInterval(() => {
 			if (elapsed < duration) {
 				elapsed += 1;
@@ -120,47 +122,51 @@
 		<div out:slide={{ duration: 1000, easing: quintOut }}>
 			<ActionBar>
 				<div class="my-4 ml-4">
-					<p class="text-lg text-slate-900">{$user}</p>
-				</div>
-				<svg
-					width="70"
-					height="70"
-					viewbox="0 0 70 70"
-					xmlns="http://www.w3.org/2000/svg"
-				>
-					<!-- Background circle -->
-					<circle
-						cx="35"
-						cy="35"
-						r="30"
-						fill="none"
-						stroke="lightgrey"
-						stroke-width="2"
-					/>
-
-					<!-- Countdown circle -->
-					<circle
-						cx="35"
-						cy="35"
-						r="30"
-						fill="none"
-						stroke={circleColor}
-						stroke-width="2"
-						stroke-dasharray={circumference}
-						stroke-dashoffset={offset}
-						transform="rotate(-90 35 35)"
-					/>
-
-					<!-- Time text in the center -->
-					<text
-						x="35"
-						y="45"
-						font-family="Arial"
-						font-size="30"
-						fill="black"
-						text-anchor="middle">{timeLeft}s</text
+					<svg
+						width="70"
+						height="70"
+						viewbox="0 0 70 70"
+						xmlns="http://www.w3.org/2000/svg"
 					>
-				</svg>
+						<!-- Background circle -->
+						<circle
+							cx="35"
+							cy="35"
+							r="30"
+							fill="none"
+							stroke="lightgrey"
+							stroke-width="2"
+						/>
+
+						<!-- Countdown circle -->
+						<circle
+							cx="35"
+							cy="35"
+							r="30"
+							fill="none"
+							stroke={circleColor}
+							stroke-width="2"
+							stroke-dasharray={circumference}
+							stroke-dashoffset={offset}
+							transform="rotate(-90 35 35)"
+						/>
+
+						<!-- Time text in the center -->
+						<text
+							x="35"
+							y="45"
+							font-family="Arial"
+							font-size="30"
+							fill="black"
+							text-anchor="middle">{timeLeft}s</text
+						>
+					</svg>
+
+					
+				</div>
+				<div class="my-4 ml-4">
+				<p class="text-lg text-slate-900">{$user}</p>
+				</div>
 				<div class="ml-auto">
 					<Button label="Generate the image" type="submit" form="promptForm" />
 				</div>
